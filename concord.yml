@@ -7,7 +7,6 @@ flows:
   
 triggers:
 - github:
-    useInitiator: true
     entryPoint: "onPush"
     conditions:
       type: "push"  
