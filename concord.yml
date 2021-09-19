@@ -12,3 +12,7 @@ triggers:
     conditions:
       type: "push"  
 
+- github:
+    entryPoint: "onPush"
+    conditions:
+      type: "push"
