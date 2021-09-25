@@ -5,6 +5,11 @@ flows:
   - log: "${event.sender} pushed ${event.commitId} to ${event.payload.repository.full_name}"  
   flow1:
   - log: "Test flow1"
+  - log: "All variables: ${context.toMap()}"
+  - script: javascript
+    body: |
+      var allVars = execution.toMap();
+      print('Getting all variables in a JavaScript snippet: ' + allVars);  
   
   
 triggers:
